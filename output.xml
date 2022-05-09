@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.8.10 on linux)" generated="20220505 10:04:17.689" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Tests" source="/home/murillo/projetos/PythonPoc/RobotFramework/WebTesting/amazon_tests.robot">
+<test id="s1-t1" name="Caso de teste 02 - Pesquisa de Produto" line="5">
+<status status="FAIL" starttime="20220505 10:04:17.710" endtime="20220505 10:04:17.711">Test contains no keywords.</status>
+</test>
+<status status="FAIL" starttime="20220505 10:04:17.691" endtime="20220505 10:04:17.712"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Amazon Tests">Amazon Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
