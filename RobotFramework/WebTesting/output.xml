@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20220621 15:48:28.238" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Tests" source="/Users/mac/Documents/projetos/PythonPoc/RobotFramework/WebTesting/amazon_tests.robot">
+<test id="s1-t1" name="Caso de teste 01 - Acesso ao menu Eletronicos" line="9">
+<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220621 15:48:28.379" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg timestamp="20220621 15:48:28.382" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220621 15:48:28.383" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</msg>
+<status status="FAIL" starttime="20220621 15:48:28.379" endtime="20220621 15:48:28.384"/>
+</kw>
+<status status="FAIL" starttime="20220621 15:48:28.379" endtime="20220621 15:48:28.385"/>
+</kw>
+<kw name="Fechar o navegador" type="TEARDOWN">
+<msg timestamp="20220621 15:48:28.389" level="FAIL">No keyword with name 'Fechar o navegador' found.</msg>
+<status status="FAIL" starttime="20220621 15:48:28.389" endtime="20220621 15:48:28.389">No keyword with name 'Fechar o navegador' found.</status>
+</kw>
+<doc>Esse teste veficia o titulo e texto apresentado na amazon
+e verifica as categorias</doc>
+<tag>menus</tag>
+<status status="FAIL" starttime="20220621 15:48:28.378" endtime="20220621 15:48:28.390">Setup failed:
+WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+Also teardown failed:
+No keyword with name 'Fechar o navegador' found.</status>
+</test>
+<test id="s1-t2" name="Caso de teste 02 - Pesquisa de Produto" line="20">
+<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220621 15:48:28.391" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg timestamp="20220621 15:48:28.394" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220621 15:48:28.395" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</msg>
+<status status="FAIL" starttime="20220621 15:48:28.391" endtime="20220621 15:48:28.395"/>
+</kw>
+<status status="FAIL" starttime="20220621 15:48:28.391" endtime="20220621 15:48:28.396"/>
+</kw>
+<kw name="Fechar o navegador" type="TEARDOWN">
+<msg timestamp="20220621 15:48:28.399" level="FAIL">No keyword with name 'Fechar o navegador' found.</msg>
+<status status="FAIL" starttime="20220621 15:48:28.399" endtime="20220621 15:48:28.399">No keyword with name 'Fechar o navegador' found.</status>
+</kw>
+<doc>Esse teste verifica a busca de produto no site da amazon</doc>
+<tag>busca_produtos</tag>
+<tag>lista_busca</tag>
+<status status="FAIL" starttime="20220621 15:48:28.390" endtime="20220621 15:48:28.400">Setup failed:
+WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+Also teardown failed:
+No keyword with name 'Fechar o navegador' found.</status>
+</test>
+<doc>Essa suit testa o site da amazon</doc>
+<status status="FAIL" starttime="20220621 15:48:28.239" endtime="20220621 15:48:28.400"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">busca_produtos</stat>
+<stat pass="0" fail="1" skip="0">lista_busca</stat>
+<stat pass="0" fail="1" skip="0">menus</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Amazon Tests">Amazon Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
