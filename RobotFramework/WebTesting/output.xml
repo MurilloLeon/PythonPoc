@@ -1,74 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20220621 15:48:28.238" rpa="false" schemaversion="3">
-<suite id="s1" name="Amazon Tests" source="/Users/mac/Documents/projetos/PythonPoc/RobotFramework/WebTesting/amazon_tests.robot">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20220704 22:47:23.532" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Tests" source="/Users/mac/projetos/PythonPoc/RobotFramework/WebTesting/amazon_tests.robot">
 <test id="s1-t1" name="Caso de teste 01 - Acesso ao menu Eletronicos" line="9">
 <kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220621 15:48:28.379" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<msg timestamp="20220621 15:48:28.382" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20220621 15:48:28.383" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
-</msg>
-<status status="FAIL" starttime="20220621 15:48:28.379" endtime="20220621 15:48:28.384"/>
+<msg timestamp="20220704 22:47:23.693" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220704 22:47:23.693" endtime="20220704 22:47:25.950"/>
 </kw>
-<status status="FAIL" starttime="20220621 15:48:28.379" endtime="20220621 15:48:28.385"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220704 22:47:25.950" endtime="20220704 22:47:26.485"/>
 </kw>
-<kw name="Fechar o navegador" type="TEARDOWN">
-<msg timestamp="20220621 15:48:28.389" level="FAIL">No keyword with name 'Fechar o navegador' found.</msg>
-<status status="FAIL" starttime="20220621 15:48:28.389" endtime="20220621 15:48:28.389">No keyword with name 'Fechar o navegador' found.</status>
+<status status="PASS" starttime="20220704 22:47:23.693" endtime="20220704 22:47:26.486"/>
+</kw>
+<kw name="Acessar a Homepage de Amazon" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220704 22:47:26.488" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20220704 22:47:26.488" endtime="20220704 22:47:28.918"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220704 22:47:28.918" endtime="20220704 22:47:29.093"/>
+</kw>
+<status status="PASS" starttime="20220704 22:47:26.487" endtime="20220704 22:47:29.094"/>
+</kw>
+<kw name="Entrar no menu &quot;Eletronicos&quot;" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220704 22:47:29.095" level="INFO">Clicking element '//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]'.</msg>
+<status status="PASS" starttime="20220704 22:47:29.094" endtime="20220704 22:47:34.945"/>
+</kw>
+<status status="PASS" starttime="20220704 22:47:29.094" endtime="20220704 22:47:34.946"/>
+</kw>
+<kw name="Verificar se apresenta o texto &quot;Eletrônicos e Tecnologia&quot;" library="amazon_resources" sourcename="Verificar se apresenta o texto &quot;${TEXTO}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${TEXTO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220704 22:47:34.947" endtime="20220704 22:47:35.091"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${HEADER_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220704 22:47:35.091" endtime="20220704 22:47:35.335"/>
+</kw>
+<status status="PASS" starttime="20220704 22:47:34.946" endtime="20220704 22:47:35.335"/>
+</kw>
+<kw name="Verificar se o titulo da pagina fica &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_resources" sourcename="Verificar se o titulo da pagina fica &quot;${TITULO}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220704 22:47:35.379" level="INFO">Page title is 'Eletrônicos e Tecnologia | Amazon.com.br'.</msg>
+<status status="PASS" starttime="20220704 22:47:35.336" endtime="20220704 22:47:35.380"/>
+</kw>
+<status status="PASS" starttime="20220704 22:47:35.336" endtime="20220704 22:47:35.380"/>
 </kw>
 <doc>Esse teste veficia o titulo e texto apresentado na amazon
 e verifica as categorias</doc>
 <tag>menus</tag>
-<status status="FAIL" starttime="20220621 15:48:28.378" endtime="20220621 15:48:28.390">Setup failed:
-WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
-
-
-Also teardown failed:
-No keyword with name 'Fechar o navegador' found.</status>
-</test>
-<test id="s1-t2" name="Caso de teste 02 - Pesquisa de Produto" line="20">
-<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220621 15:48:28.391" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<msg timestamp="20220621 15:48:28.394" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20220621 15:48:28.395" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
-</msg>
-<status status="FAIL" starttime="20220621 15:48:28.391" endtime="20220621 15:48:28.395"/>
-</kw>
-<status status="FAIL" starttime="20220621 15:48:28.391" endtime="20220621 15:48:28.396"/>
-</kw>
-<kw name="Fechar o navegador" type="TEARDOWN">
-<msg timestamp="20220621 15:48:28.399" level="FAIL">No keyword with name 'Fechar o navegador' found.</msg>
-<status status="FAIL" starttime="20220621 15:48:28.399" endtime="20220621 15:48:28.399">No keyword with name 'Fechar o navegador' found.</status>
-</kw>
-<doc>Esse teste verifica a busca de produto no site da amazon</doc>
-<tag>busca_produtos</tag>
-<tag>lista_busca</tag>
-<status status="FAIL" starttime="20220621 15:48:28.390" endtime="20220621 15:48:28.400">Setup failed:
-WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
-
-
-Also teardown failed:
-No keyword with name 'Fechar o navegador' found.</status>
+<status status="PASS" starttime="20220704 22:47:23.692" endtime="20220704 22:47:35.380"/>
 </test>
 <doc>Essa suit testa o site da amazon</doc>
-<status status="FAIL" starttime="20220621 15:48:28.239" endtime="20220621 15:48:28.400"/>
+<status status="PASS" starttime="20220704 22:47:23.533" endtime="20220704 22:47:35.381"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">busca_produtos</stat>
-<stat pass="0" fail="1" skip="0">lista_busca</stat>
-<stat pass="0" fail="1" skip="0">menus</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" skip="0" id="s1" name="Amazon Tests">Amazon Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Tests">Amazon Tests</stat>
 </suite>
 </statistics>
 <errors>
